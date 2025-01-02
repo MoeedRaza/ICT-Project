@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechAura/Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3b79a0;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .payment-container {
+            max-width: 600px;
+            margin: 3em auto;
+            padding: 2em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .payment-container h2 {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        label {
+            display: block;
+            margin: 0.5em 0;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"], input[type="email"], input[type="tel"] {
+            width: 100%;
+            padding: 0.8em;
+            margin: 0.5em 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .payment-btn {
+            background-color: #3b79a0;
+            color: white;
+            padding: 0.8em 1.5em;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            margin-top: 1em;
+            font-size: 16px;
+        }
+
+        .payment-btn:hover {
+            background-color: #2f5a74;
+        }
+
+        footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        footer p {
+            color: #fd2b2b;
+        }
+        footer h2{
+            text-align: center;
+            margin-bottom: 1px;
+            color: #fd2b2b;
+            font-size: 1.5rem;
+        }
+        footer .msg {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 9px;
+            width: 50%;
+            height: 400px;
+            margin-top: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            
+        }
+        footer form {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        input {
+            display: block;
+            padding: 5px 6px;
+        }
+        footer .message {
+            height: 50px;
+            margin-bottom: 7px;
+        }
+        footer form input, footer form {
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
+            font-size: 1rem;
+        }
+        footer form button {
+            background-color: #e94560;
+            border: none;
+            border-radius: 5px;
+            color: #eaeaea;
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 11px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        footer form button:hover {
+            background-color: #691619;
+            box-shadow: 1px 5px 8px black;
+        }
+
+        .total-price {
+            font-size: 1.2em;
+            margin-top: 1em;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .payment-container {
+                padding: 1.5em;
+            }
+
+            label {
+                font-size: 14px;
+            }
+
+            .payment-btn {
+                font-size: 14px;
+                padding: 0.7em 1.2em;
+            }
+
+            .total-price {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .payment-container {
+                margin: 2em auto;
+                padding: 1em;
+            }
+
+            input[type="text"], input[type="number"], input[type="email"], input[type="tel"] {
+                padding: 0.6em;
+                font-size: 14px;
+            }
+
+            .payment-btn {
+                font-size: 14px;
+                padding: 0.7em 1em;
+            }
+
+            footer {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TechAura Payment/</h1>
+    </header>
+
+    <div class="payment-container">
+        <h2>Enter Payment Details</h2>
+        <form id="payment-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+            <label for="address">Shipping Address</label>
+            <input type="text" id="address" placeholder="Enter your shipping address" required>
+
+            <label for="card">Credit/Debit Card Number</label>
+            <input type="number" id="card" placeholder="Enter your card number" required>
+
+            <div class="total-price">
+                <p>Total Price: <span id="total-price"></span> PKR</p>
+            </div>
+
+            <button type="submit" class="payment-btn">Pay Now</button>
+        </form>
+    </div>
+
+    <footer>
+        
+        <div class="msg">
+            <form action="" class="contact">
+                <h2>Contact with us</h2>
+                <label for="email" class="email">Email</label>
+                <input type="email" id="email" required>
+                <label for="Message" >Message</label>
+                <input type="text " id="Message" class="message" required>
+                <button class="submit">Submit</button>
+            </form>
+            
+        </div>
+        <p>&copy; 2020 TechAura. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Fetch cart from localStorage and calculate the total price
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let totalPrice = 0;
+
+        cart.forEach(item => {
+            totalPrice += item.price * (item.quantity || 1); // Account for quantity if available
+        });
+
+        // Display the total price on the payment page
+        document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+
+        // Handle form submission
+        document.getElementById('payment-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form from submitting
+
+            // Gather payment information
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const card = document.getElementById('card').value;
+
+            // Simulate a payment success message
+            alert(`Thank you, ${name}! Your payment of ${totalPrice.toFixed(2)} PKR has been processed successfully.`);
+            
+            // Optionally, you can store payment info (just for simulation in this example)
+            const paymentDetails = {
+                name: name,
+                email: email,
+                phone: phone,
+                address: address,
+                card: card,
+                totalPrice: totalPrice.toFixed(2)
+            };
+
+            // Here you can use localStorage to simulate storing payment info
+            localStorage.setItem('paymentDetails', JSON.stringify(paymentDetails));
+            
+            // After payment, redirect user (Optional)
+            // window.location.href = "thank-you-page.html";
+        });
+    </script>
+</body>
+</html>
