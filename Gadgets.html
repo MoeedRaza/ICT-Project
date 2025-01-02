@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechAura/Gadgets/</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #3b79a0;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        header img {
+            height: 40px;
+            position: absolute;
+            left: 10px;
+            top: 15px;
+        }
+        header a {
+            text-decoration: none;
+            color: #000;
+        }
+        header a:hover {
+            color: red;
+        }
+        header .cart {
+            position: absolute;
+            right: 25px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .section {
+            background-color: #fff;
+            margin: 2em auto;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            max-width: 600px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .section h3, .section h2, .section h4 {
+            color: #333;
+        }
+
+        .section p, .section li {
+            color: #555;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .section button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        footer p {
+            color: #fd2b2b;
+        }
+        footer h2{
+            text-align: center;
+            margin-bottom: 1px;
+            color: #fd2b2b;
+            font-size: 1.5rem;
+        }
+        footer .msg {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 9px;
+            width: 50%;
+            height: 300px;
+            margin-top: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            
+        }
+        footer form {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        input {
+            display: block;
+            padding: 5px 6px;
+        }
+        footer .message {
+            height: 50px;
+            margin-bottom: 7px;
+        }
+        footer form input, footer form {
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
+            font-size: 1rem;
+        }
+        footer form button {
+            background-color: #e94560;
+            border: none;
+            border-radius: 5px;
+            color: #eaeaea;
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 11px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        footer form button:hover {
+            background-color: #691619;
+            box-shadow: 1px 5px 8px black;
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 0.5em 0;
+            }
+
+            header img {
+                height: 30px;
+                left: 5px;
+            }
+
+            h1 {
+                font-size: 1.2em;
+            }
+
+            .section {
+                padding: 1em;
+                margin: 1em auto;
+                max-width: 100%;
+                box-shadow: none;
+            }
+
+            .section img {
+                width: 100%;
+                height: auto;
+            }
+
+            .section button {
+                width: 100%;
+                padding: 15px;
+            }
+
+            footer {
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .section h3 {
+                font-size: 1.2em;
+            }
+
+            .section button {
+                padding: 15px;
+                font-size: 1em;
+            }
+
+            footer {
+                font-size: 0.7em;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <a href="Home.html"><img src="Logo.png" alt=""></a>
+        <h1><b>Gadgets</b></h1>
+        <a href="Cart.html" class="cart">Go to Cart</a>
+    </header>
+
+    <div id="Gadget-1" class="section">
+        <div id="section-content">
+            <h3><b>RG100 Pro Drone</b></h3>
+            <h4><b>PKR 26,500</b></h4>
+            <h4><b>Specifications</b></h4>
+            <ul>
+                <li><b>Camera:</b><p>4K HD Dual Camera (Front: 4096x2160, Bottom: 1920x1080)</p></li>
+                <li><b>Obstacle Avoidance:</b><p>Visual (up to 5 meters)</p></li>
+                <li><b>Flight Time:</b><p>Up to 15 minutes.</p></li>
+                <li><b>Battery:</b><p>3.7V/2000mAh Lithium Battery</p></li>
+                <li><b>Remote Control Frequency:</b><p>2.4 Ghz</p></li>
+                <li><b>Foldable:</b><p>Yes</p></li>
+                <li><b>Weight:</b><p>165g</p></li>
+            </ul>
+        </div>
+        <img src="Gadget_1.jpg" alt="">
+        <button type="button" onclick="addToCart('RG100 Pro Drone', '26500')">Add To Cart</button>
+    </div>
+
+    <div id="Gadget-2" class="section">
+        <div id="section-content">
+            <h3><b>DJI Neo Fly More Combo</b></h3>
+            <h4><b>PKR 139,999</b></h4>
+            <h4><b>Specifications</b></h4>
+            <ul>
+                <li><b>Camera:</b><p>12 MP, 1/2" CMOS Sensor (117.6° FOV)</p></li>
+                <li><b>Video Resolution:</b><p>Up to 4K at 30 fps / 1080p at 60 fps</p></li>
+                <li><b>Flight Time:</b><p>Up to 18 minutes</p></li>
+                <li><b>Battery:</b><p>1435 mAh / 10.5 Wh Lithium-Ion Polymer Battery</p></li>
+                <li><b>Maximun Speed:</b><p>35.8 mph / 16 m/s</p></li>
+                <li><b>Wind Resistance:</b><p>Up to 17.9 mph / 8 m/s</p></li>
+                <li><b>Control:</b><p>DJI Fly App, Smartphone/Mobile Device</p></li>
+                <li><b>QuickShots:</b><p>Dronie, Circle, Rocket, Spotlight, Helix, Boomerang</p></li>
+            </ul>
+        </div>
+        <img src="Gadget_2.jpg" alt="">
+        <button type="button" onclick="addToCart('DJI Neo Fly More Combo', '139999')">Add To Cart</button>
+    </div>
+
+    <div id="Gadget-3" class="section">
+        <div id="section-content">
+            <h3><b>Go Pro Hero 11</b></h3>
+            <h4><b>PKR 85,000</b></h4>
+            <h4><b>Specifications</b></h4>
+            <ul>
+                <li><b>Camera:</b><p>12 MP Sensor</p></li>
+                <li><b>Video Resolution:</b><p>5.3K at 60 fps, 4K at 120 fps, 2.7K at 240 fps, 1080p at 240 fps</p></li>
+                <li><b>Frame Rate:</b><p>Up to 240 fps</p></li>
+                <li><b>Stabilization:</b><p>HyperSmooth 4.0</p></li>
+                <li><b>Battery:</b><p>1720mAh Lithium-Ion Battery</p></li>
+                <li><b>Dimensions:</b><p>71.8 x 55.1 x 33.6 mm</p></li>
+            </ul>
+        </div>
+        <img src="Gadget_3.jpg" alt="">
+        <button type="button" onclick="addToCart('Go Pro Hero 11', '85000')">Add To Cart</button>
+    </div>
+
+    <div id="Gadget-4" class="section">
+        <div id="section-content">
+            <h3><b>Insta360 One X</b></h3>
+            <h4><b>PKR 50,000</b></h4>
+            <h4><b>Specifications</b></h4>
+            <ul>
+                <li><b>Camera:</b><p>Dual 4K Cameras (360°)</p></li>
+                <li><b>Video Resolution:</b><p>5.7K at 30 fps, 4K at 60 fps</p></li>
+                <li><b>Stabilization:</b><p>FlowState Stabilization</p></li>
+                <li><b>Battery:</b><p>3400mAh Lithium-Ion Battery</p></li>
+                <li><b>Dimensions:</b><p>72.6 x 46.2 x 28.4 mm</p></li>
+            </ul>
+        </div>
+        <img src="Gadget_4.jpg" alt="">
+        <button type="button" onclick="addToCart('Insta360 One X', '50000')">Add To Cart</button>
+    </div>
+
+    <div id="Gadget-5" class="section">
+        <div id="section-content">
+            <h3><b>BOYA BY-MM1 Cardioid Microphone</b></h3>
+            <h4><b>PKR 7,000</b></h4>
+            <h4><b>Specifications</b></h4>
+            <ul>
+                <li><b>Type:</b><p>Cardioid Microphone</p></li>
+                <li><b>Frequency Response:</b><p>20Hz-20kHz</p></li>
+                <li><b>Sensitivity:</b><p>-38dB ± 3dB</p></li>
+                <li><b>Output:</b><p>3.5mm Jack</p></li>
+                <li><b>Weight:</b><p>160g</p></li>
+                <li><b>Power Supply:</b><p>48V Phantom Power</p></li>
+            </ul>
+        </div>
+        <img src="Gadget_5.jpg" alt="">
+        <button type="button" onclick="addToCart('BOYA BY-MM1 Cardioid Microphone', '7000')">Add To Cart</button>
+    </div>
+
+    <footer>
+        
+        <div class="msg">
+            <form action="" class="contact">
+                <h2>Contact with us</h2>
+                <label for="email" class="email">Email</label>
+                <input type="email" id="email" required>
+                <label for="Message" >Message</label>
+                <input type="text " id="Message" class="message" required>
+                <button class="submit">Submit</button>
+            </form>
+            
+        </div>
+        <p>&copy; 2020 TechAura. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Initialize cart
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function addToCart(itemName, itemPrice) {
+            const item = { name: itemName, price: itemPrice };
+            cart.push(item);
+
+            // Update the cart in localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Alert the user
+            alert(`${itemName} has been added to your cart!`);
+        }
+    </script>
+</body>
+</html>
