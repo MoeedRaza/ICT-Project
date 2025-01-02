@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechAura</title>
-
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -37,31 +36,40 @@
 
         .section {
             padding: 50px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-content {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .section-content h2 {
+            margin: 10px 0;
         }
 
         .section img {
             max-width: 500px;
             max-height: 500px;
             border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .section-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            font-size: larger;
-            margin-bottom: 30px;
         }
 
         .section:nth-child(odd) {
             background-color: #e3e1e1;
         }
-
-        .section-content h2 {
-            margin: 10px 0;
+        .section-content2 .section-content4 {
+            right: 34px;
+        }
+        
+        .lapsrc {
+            background-color: #ffffff;
+            border: none;
+            color: #ff0008;
+            border-radius: 4px;
+            text-decoration: none;
+            font-style: italic;
         }
 
         footer {
@@ -77,15 +85,18 @@
             flex-direction: column;
             align-items: center;
         }
+
         footer p {
             color: #fd2b2b;
         }
-        footer h2{
+
+        footer h2 {
             text-align: center;
             margin-bottom: 1px;
             color: #fd2b2b;
             font-size: 1.5rem;
         }
+
         footer .msg {
             text-align: left;
             background: rgba(255, 255, 255, 0.1);
@@ -95,27 +106,31 @@
             height: 300px;
             margin-top: 25px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            
         }
+
         footer form {
             display: flex;
             flex-direction: column;
             gap: 5px;
         }
+
         input {
             display: block;
             padding: 5px 6px;
         }
+
         footer .message {
             height: 50px;
             margin-bottom: 7px;
         }
+
         footer form input, footer form {
             padding: 10px;
             border-radius: 4px;
             border: none;
             font-size: 1rem;
         }
+
         footer form button {
             background-color: #e94560;
             border: none;
@@ -126,10 +141,12 @@
             padding: 11px;
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
+
         footer form button:hover {
             background-color: #691619;
             box-shadow: 1px 5px 8px black;
         }
+
         @media only screen and (max-width: 768px) {
             header h1 {
                 font-size: 1.5rem;
@@ -145,12 +162,15 @@
             }
 
             .section {
+                flex-direction: column;
+                text-align: center;
                 padding: 30px;
             }
 
             .section img {
                 max-width: 100%;
                 height: auto;
+                margin-top: 20px;
             }
 
             footer .msg {
@@ -190,7 +210,6 @@
                 padding: 8px;
             }
         }
-
     </style>
 </head>
 <body>
@@ -210,46 +229,52 @@
         <div class="section-content">
             <h2>Laptops</h2>
             <p>The best and reliable laptops for all your needs.</p>
+            <p>Wanna have a look?</p>
+            <a href="Laptops.html" class="lapsrc">Click me...</a>
         </div>
         <a href="Laptops.html"><img src="laptop.jpg" alt=""></a>
     </div>
 
     <div id="section2" class="section">
-        <div class="section-content">
+        <a href="Mobiles.html"><img src="mobiles.jpg" alt=""></a>
+        <div class="section-content" >
             <h2>Mobiles</h2>
             <p>The best selling mobile phones.</p>
+            <p>Wanna have a look?</p>
+            <a href="Mobiles.html" class="lapsrc" style="background-color: #e3e1e1;">Click me...</a>
         </div>
-        <a href="Mobiles.html"><img src="mobiles.jpg" alt=""></a>
     </div>
 
     <div id="section3" class="section">
         <div class="section-content">
             <h2>Accessories</h2>
             <p>All the premium quality accessories you need.</p>
+            <p>Wanna have a look?</p>
+            <a href="Accessories.html" class="lapsrc">Click me...</a>
         </div>
         <a href="Accessories.html"><img src="accessories.jpg" alt=""></a>
     </div>
 
     <div id="section4" class="section">
-        <div class="section-content">
+        <a href="Gadgets.html"><img src="gadgets.jpg" alt=""></a>
+        <div class="section-content" style="margin-right: 34px;">
             <h2>Gadgets</h2>
             <p>All the type of gadgets you need.</p>
+            <p>Wanna have a look?</p>
+            <a href="Gadgets.html" class="lapsrc" style="background-color: #e3e1e1;">Click me...</a>
         </div>
-        <a href="Gadgets.html"><img src="gadgets.jpg" alt=""></a>
     </div>
 
     <footer>
-        
         <div class="msg">
             <form action="" class="contact">
                 <h2>Contact with us</h2>
                 <label for="email" class="email">Email</label>
                 <input type="email" id="email" required>
-                <label for="Message" >Message</label>
-                <input type="text " id="Message" class="message" required>
+                <label for="Message">Message</label>
+                <input type="text" id="Message" class="message" required>
                 <button class="submit">Submit</button>
             </form>
-            
         </div>
         <p>&copy; 2020 TechAura. All Rights Reserved.</p>
     </footer>
