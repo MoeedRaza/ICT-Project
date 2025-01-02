@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechAura/Laptops/</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #3b79a0;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        header img {
+            height: 40px;
+            position: absolute;
+            left: 10px;
+            top: 15px;
+        }
+        header a {
+            text-decoration: none;
+            color: #000;
+        }
+        header a:hover {
+            color: red;
+        }
+        header .cart {
+            position: absolute;
+            right: 25px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .section {
+            background-color: #fff;
+            margin: 2em auto;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            max-width: 600px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .section h3, .section h2, .section h4 {
+            color: #333;
+        }
+
+        .section p, .section li {
+            color: #555;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .section button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .section button:hover {
+            background-color: #555;
+        }
+
+        strong {
+            color: #000;
+        }
+
+        footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        footer p {
+            color: #fd2b2b;
+        }
+        footer h2{
+            text-align: center;
+            margin-bottom: 1px;
+            color: #fd2b2b;
+            font-size: 1.5rem;
+        }
+        footer .msg {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 9px;
+            width: 50%;
+            height: 300px;
+            margin-top: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            
+        }
+        footer form {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        input {
+            display: block;
+            padding: 5px 6px;
+        }
+        footer .message {
+            height: 50px;
+            margin-bottom: 7px;
+        }
+        footer form input, footer form {
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
+            font-size: 1rem;
+        }
+        footer form button {
+            background-color: #e94560;
+            border: none;
+            border-radius: 5px;
+            color: #eaeaea;
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 11px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        footer form button:hover {
+            background-color: #691619;
+            box-shadow: 1px 5px 8px black;
+        }
+        @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5em 0;
+    }
+
+    header img {
+        height: 30px;
+        left: 5px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    a {
+        padding: 5px 10px;
+    }
+
+    .section {
+        padding: 1em;
+        margin: 1em auto;
+        max-width: 100%;
+        box-shadow: none;
+    }
+
+    .section img {
+        width: 100%;
+        height: auto;
+    }
+
+    .section button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .section h3 {
+        font-size: 1.2em;
+    }
+
+    .section button {
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    footer {
+        font-size: 0.7em;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="Home.html"><img src="Logo.png" alt="Logo"></a>
+        <h1><b>Laptops</b></h1>
+        <a href="Cart.html" class="cart">Go to Cart</a>
+    </header>
+
+    <div id="Laptop-1" class="section">
+        <div id="section-content">
+            <h3><b>Apple MacBook Pro M3</b></h3>
+            <h4><b>PKR 377,999</b></h4>
+            <h4><b>Specifications:</b></h4>
+            <ul>
+                <li><b>Processor:</b> M3 Chip (8-core CPU, 10-core GPU)</li>
+                <li><b>RAM:</b> 8GB</li>
+                <li><b>Storage:</b> 512GB SSD</li>
+                <li><b>Display:</b> 14-inch Liquid Retina XDR</li>
+                <li><b>Battery Life:</b> Up to 22 hours</li>
+                <li><b>Other Features:</b> Touch Bar, FaceTime HD camera, Thunderbolt ports, MagSafe 3 charging</li>
+            </ul>
+        </div>
+        <img src="Laptop_1.jpg" alt="Apple MacBook Pro M3">
+        <button type="button" onclick="addToCart('Apple MacBook Pro M3', 377999)">Add To Cart</button>
+    </div>
+
+    <div id="Laptop-2" class="section">
+        <div id="section-content">
+        <h3><b>ASUS Zenbook Pro Duo UX581</b></h3>
+        <h4><b>PKR 395,000</b></h4>
+        <h4><b>Specifications:</b></h4>
+        <ul>
+            <li><b>Processor:</b> 9th Gen Intel Core i7-9750H (6-core, 12-thread)</li>
+            <li><b>RAM:</b> 16GB DDR4</li>
+            <li><b>Storage:</b> 1TB SSD</li>
+            <li><b>Graphics:</b> NVIDIA GeForce RTX 2060 (6GB GDDR6)</li>
+            <li><b>Display:</b> 15.6-inch OLED 4K main display, 14-inch ScreenPad Plus</li>
+            <li><b>Other Features:</b> Harman Kardon sound, backlit keyboard, Windows Hello IR camera</li>
+        </ul>
+        </div>
+        <img src="Laptop_2.jpg" alt="ASUS Zenbook Pro Duo UX581">
+        <button type="button" onclick="addToCart('ASUS Zenbook Pro Duo UX581', 395000)">Add To Cart</button>
+    </div>
+
+    <div id="Laptop-3" class="section">
+        <div id="section-content">
+            <h3><b>Lenovo Legion 5 Slim</b></h3>
+            <h4><b>PKR 450,000</b></h4>
+            <h4><b>Specifications:</b></h4>
+            <ul>
+                <li><b>Processor:</b> AMD Ryzen 7 5800H</li>
+                <li><b>RAM:</b> 16GB DDR4</li>
+                <li><b>Storage:</b> 512GB SSD</li>
+                <li><b>Graphics:</b> NVIDIA GeForce GTX 1650 Ti</li>
+                <li><b>Display:</b> 15.6-inch Full HD IPS</li>
+                <li><b>Other Features:</b> RGB keyboard, 1.8mm key travel, 720p webcam</li>
+            </ul>
+        </div>
+        <img src="Laptop_3.jpg" alt="Lenovo Legion 5 Slim">
+        <button type="button" onclick="addToCart('Lenovo Legion 5 Slim', 450000)">Add To Cart</button>
+    </div>
+
+    <div id="Laptop-4" class="section">
+        <div id="section-content">
+            <h3><b>Lenovo Ideapad Flex 5</b></h3>
+            <h4><b>PKR 300,000</b></h4>
+            <h4><b>Specifications:</b></h4>
+            <ul>
+                <li><b>Processor:</b> AMD Ryzen 5 5500U</li>
+                <li><b>RAM:</b> 8GB DDR4</li>
+                <li><b>Storage:</b> 256GB SSD</li>
+                <li><b>Graphics:</b> Integrated AMD Radeon Graphics</li>
+                <li><b>Display:</b> 13.3-inch Full HD IPS touchscreen (flexible design)</li>
+                <li><b>Other Features:</b> Webcam, backlit keyboard, fingerprint reader</li>
+            </ul>
+        </div>
+        <img src="Laptop_4.jpg" alt="Lenovo Ideapad Flex 5">
+        <button type="button" onclick="addToCart('Lenovo Ideapad Flex 5', 300000)">Add To Cart</button>
+    </div>
+    
+    <div id="Laptop-5" class="section">
+        <div id="section-content">
+            <h3><b>Dell Latitude 3340</b></h3>
+            <h4><b>PKR 350,000</b></h4>
+            <h4><b>Specifications:</b></h4>
+            <ul>
+                <li><b>Processor:</b> Intel Core i5-5200U</li>
+                <li><b>RAM:</b> 8GB DDR3</li>
+                <li><b>Storage:</b> 256GB SSD</li>
+                <li><b>Graphics:</b> Integrated Intel HD Graphics</li>
+                <li><b>Display:</b> 13.3-inch HD (1366 x 768) display</li>
+                <li><b>Other Features:</b> Webcam, spill-resistant keyboard, HDMI port</li>
+            </ul>
+        </div>
+        <img src="Laptop_5.jpg" alt="Dell Latitude 3340">
+        <button type="button" onclick="addToCart('Dell Latitude 3340', 350000)">Add To Cart</button>
+    </div>
+
+    <footer>
+        
+        <div class="msg">
+            <form action="" class="contact">
+                <h2>Contact with us</h2>
+                <label for="email" class="email">Email</label>
+                <input type="email" id="email" required>
+                <label for="Message" >Message</label>
+                <input type="text " id="Message" class="message" required>
+                <button class="submit">Submit</button>
+            </form>
+            
+        </div>
+        <p>&copy; 2020 TechAura. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Initialize cart
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function addToCart(itemName, itemPrice) {
+            const item = { name: itemName, price: itemPrice };
+            cart.push(item);
+
+            // Updating the cart in localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            alert(`${itemName} has been added to your cart!`);
+        }
+    </script>
+    
+    
+</body>
+</html>
