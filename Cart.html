@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechAura/Cart/</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #3b79a0;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        header img {
+            height: 40px;
+            position: absolute;
+            left: 10px;
+            top: 15px;
+        }
+        header a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .cart-container {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .cart-container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+        }
+
+        .cart-table th, .cart-table td {
+            padding: 1em;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .cart-table th {
+            background-color: #f4f4f4;
+        }
+
+        .cart-table td input[type="number"] {
+            width: 50px;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        .remove-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .remove-btn:hover {
+            background-color: darkred;
+        }
+
+        .cart-total {
+            text-align: right;
+            margin-top: 1em;
+        }
+
+        .cart-total h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .checkout-btn {
+            background-color: #3b79a0;
+            color: white;
+            padding: 0.5em 1em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 1em;
+        }
+        .checkout-btn a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .checkout-btn:hover {
+            background-color: #333;
+        }
+
+        footer {
+            background-color: #3b79a0;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    header img {
+        height: 30px;
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    .cart-container {
+        margin: 1em;
+        padding: 1em;
+    }
+
+    .cart-table th, .cart-table td {
+        padding: 0.8em;
+    }
+
+    .cart-table td input[type="number"] {
+        width: 40px;
+    }
+
+    .cart-total {
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    .checkout-btn {
+        width: 100%;
+        padding: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-container {
+        padding: 1em;
+    }
+
+    .cart-table td input[type="number"] {
+        width: 35px;
+    }
+
+    .remove-btn {
+        padding: 0.4em 0.8em;
+    }
+
+    .cart-total h3 {
+        font-size: 1.1em;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="Home.html"><img src="Logo.png" alt="Logo"></a>
+        <h1>TechAura Cart</h1>
+        
+    </header>
+
+    <div class="cart-container">
+        <h2>Shopping Cart</h2>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+
+            </tbody>
+        </table>
+
+        <div class="cart-total">
+            <h3>Total: <span id="total-price">0</span> PKR</h3>
+            <button class="checkout-btn"> <a href="payment.html">Checkout</a></button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2020 TechAura. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // Fetch cart from localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+        // Function to update the cart display
+        function updateCartDisplay() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const totalPriceContainer = document.getElementById('total-price');
+            cartItemsContainer.innerHTML = ''; // Clear current cart display
+    
+            let totalPrice = 0;
+    
+            cart.forEach((item, index) => {
+                const row = document.createElement('tr');
+                
+                // Product Name
+                const nameCell = document.createElement('td');
+                nameCell.textContent = item.name;
+                row.appendChild(nameCell);
+    
+                // Quantity (set to 1 for simplicity in this example)
+                const quantityCell = document.createElement('td');
+                quantityCell.textContent = item.quantity || 1;  // Account for quantity (if available)
+                row.appendChild(quantityCell);
+    
+                // Price
+                const priceCell = document.createElement('td');
+                priceCell.textContent = item.price;
+                row.appendChild(priceCell);
+    
+                // Total (Price * Quantity)
+                const totalCell = document.createElement('td');
+                const totalItemPrice = item.price * (item.quantity || 1); // Use quantity if available
+                totalCell.textContent = totalItemPrice;
+                row.appendChild(totalCell);
+    
+                // Remove Button
+                const removeCell = document.createElement('td');
+                const removeBtn = document.createElement('button');
+                removeBtn.textContent = 'Remove';
+                removeBtn.classList.add('remove-btn');
+                removeBtn.addEventListener('click', () => {
+                    removeFromCart(index);
+                });
+                removeCell.appendChild(removeBtn);
+                row.appendChild(removeCell);
+    
+                // Add the row to the cart items container
+                cartItemsContainer.appendChild(row);
+    
+                totalPrice += totalItemPrice; // Accumulate total price
+            });
+    
+            // Update the total price display
+            totalPriceContainer.textContent = totalPrice.toFixed(2); // Show total price rounded to 2 decimal places
+        }
+    
+        // Function to remove item from cart
+        function removeFromCart(index) {
+            cart.splice(index, 1); // Remove item from cart
+            localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
+            updateCartDisplay(); // Refresh the cart display
+        }
+    
+        // Initialize the cart display
+        updateCartDisplay();
+    </script>
+    
+    
+</body>
+</html>
